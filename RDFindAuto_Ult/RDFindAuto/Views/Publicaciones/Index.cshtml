@@ -1,0 +1,87 @@
+﻿@model IEnumerable<RDFindAuto.Models.Publicacion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.color.colorDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.condicion.condicionDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.marca.marcaDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.modelo.modeloDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipoCombustible.tipoCombustibledesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tiposVehiculo.tipoVehiculodesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Precio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.color.colorDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.condicion.condicionDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.marca.marcaDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.modelo.modeloDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipoCombustible.tipoCombustibledesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tiposVehiculo.tipoVehiculodesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDPublicacion }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDPublicacion }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDPublicacion })
+        </td>
+    </tr>
+}
+
+</table>

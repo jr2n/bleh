@@ -1,0 +1,39 @@
+﻿@model IEnumerable<RDFindAuto.Models.Modelo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.marca.marcaDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.modeloDesc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.marca.marcaDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.modeloDesc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDModelo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDModelo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDModelo })
+        </td>
+    </tr>
+}
+
+</table>

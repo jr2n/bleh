@@ -1,0 +1,26 @@
+﻿@model RDFindAuto.Models.TipoCombustible
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TipoCombustible</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoCombustibledesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipoCombustibledesc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDTipoCombustible }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

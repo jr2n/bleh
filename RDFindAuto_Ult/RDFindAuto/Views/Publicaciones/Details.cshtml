@@ -1,0 +1,107 @@
+﻿@model RDFindAuto.Models.Publicacion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Publicacion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @if (Model.Files.Any(f => f.FileType == FileType.Avatar))
+        {
+            <dt>
+                Avatar
+            </dt>
+            <dd>
+                <img src="~/File?id=@Model.Files.First(f => f.FileType == FileType.Avatar).FileId" alt="avatar" />
+            </dd>
+        }
+        <dt>
+            @Html.DisplayNameFor(model => model.color.colorDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.color.colorDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.condicion.condicionDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.condicion.condicionDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.marca.marcaDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.marca.marcaDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.modelo.modeloDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.modelo.modeloDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoCombustible.tipoCombustibledesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipoCombustible.tipoCombustibledesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tiposVehiculo.tipoVehiculodesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tiposVehiculo.tipoVehiculodesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDPublicacion }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
